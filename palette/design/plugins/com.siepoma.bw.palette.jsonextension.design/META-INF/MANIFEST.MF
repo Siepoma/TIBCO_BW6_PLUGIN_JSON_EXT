@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.siepoma.bw.palette.jsonextension.design;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Localization: plugin
+Bundle-Activator: com.siepoma.bw.palette.jsonextension.design.JsonExtension
+Bundle-Vendor: %providerName
+Require-Bundle: com.siepoma.bw.palette.jsonextension.model;bundle-version="1.0.0",
+ com.tibco.bw.design;bundle-version="[6.0.0,7.0.0)",
+ com.tibco.bw.model.eclipse;bundle-version="[6.0.0,7.0.0)",
+ com.tibco.amf.sca.model.validation;bundle-version="[3.901.0,4.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: com.siepoma.bw.palette.jsonextension.design;version="1.0.0",
+ com.siepoma.bw.palette.jsonextension.design.validatejson;version="1.0.0",
+ com.siepoma.bw.palette.jsonextension.design.removenull;version="1.0.0"

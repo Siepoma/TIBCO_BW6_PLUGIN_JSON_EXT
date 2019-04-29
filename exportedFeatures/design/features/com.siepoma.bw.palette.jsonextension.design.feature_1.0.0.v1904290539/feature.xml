@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Overridable true -->
+<feature
+      id="com.siepoma.bw.palette.jsonextension.design.feature"
+      label="%featureName"
+      version="1.0.0.v1904290539"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="com.siepoma.bw.palette.jsonextension.design"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v1904290539"
+         unpack="false"/>
+
+</feature>

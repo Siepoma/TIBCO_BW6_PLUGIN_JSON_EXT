@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.atos.net/sipoma/nterface"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.atos.net/sipoma/nterface">
+
+	<element name="CheckJson" type="tns:CheckJson_Type" />
+	<element name="JsonString" type="string" />
+	<element name="PathToJsonValidator" type="string" />
+
+	<element name="ValuesNotFound">
+		<complexType>
+			<sequence>
+				<element name="value" type="string" maxOccurs="unbounded"  minOccurs="0"/>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="CheckJson_Type">
+		<sequence>
+			<element ref="tns:JsonString" />
+			<element ref="tns:PathToJsonValidator" />
+		</sequence>
+	</complexType>
+</schema>

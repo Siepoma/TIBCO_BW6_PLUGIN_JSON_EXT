@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+ Overridable true
+ $Id$
+-->
+
+<plugin>
+
+   <extension
+         point="com.tibco.bw.design.Palette">
+      <paletteDrawer
+            expanded="false"
+            largeIcon="icons/obj32/jsonextension_32x32.jpg"
+            name="%jsonextension.palette.name"
+            paletteID="bw.jsonextension"
+            priority="500"
+            productID="bw.jsonextension.product"
+            smallIcon="icons/obj16/jsonextension_16x16.jpg"
+            tooltip="%jsonextension.palette.tooltip">
+      </paletteDrawer>
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.ActivityType">
+      <activityType
+            activityTypeID="bw.jsonextension.validatejson"
+            name="%jsonextension.activity.validatejson.name"
+            type="Standard"
+            priority="100"
+            tooltip="%jsonextension.activity.validatejson.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.jsonextension">
+         </palette>
+      </activityType>
+
+      <activityType
+            activityTypeID="bw.jsonextension.removenull"
+            name="%jsonextension.activity.removenull.name"
+            type="Standard"
+            priority="100"
+            tooltip="%jsonextension.activity.removenull.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.jsonextension">
+         </palette>
+      </activityType>
+
+      
+   </extension>
+   
+     <extension
+         point="com.tibco.bw.design.ActivitySignature">
+      <signature
+            activityTypeID="bw.jsonextension.validatejson"
+            signatureClass="com.siepoma.bw.palette.jsonextension.design.validatejson.ValidateJSONSignature">
+      </signature>
+      <signature
+            activityTypeID="bw.jsonextension.removenull"
+            signatureClass="com.siepoma.bw.palette.jsonextension.design.removenull.RemoveNullSignature">
+      </signature>
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.ActivityTypeConfigEMF">
+      <config
+            activityTypeID="bw.jsonextension.validatejson"
+            eClassName="ValidateJSON"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/jsonextension"
+            instanceName="%jsonextension.activity.default.validatejson.name"
+            modelHelperClass="com.siepoma.bw.palette.jsonextension.design.validatejson.ValidateJSONModelHelper">
+      </config>
+      <config
+            activityTypeID="bw.jsonextension.removenull"
+            eClassName="RemoveNull"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/jsonextension"
+            instanceName="%jsonextension.activity.default.removenull.name"
+            modelHelperClass="com.siepoma.bw.palette.jsonextension.design.removenull.RemoveNullModelHelper">
+      </config>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="com.tibco.bw.core.design.process.editor">
+         <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.siepoma.bw.palette.jsonextension.design.validatejson.ValidateJSONGeneralSection"
+               filter="com.siepoma.bw.palette.jsonextension.design.validatejson.ValidateJSONGeneralSection"
+               id="bw.jsonextension.validatejson.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>
+      </propertySections>
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.BWContextHelp">
+      <plugin
+            defaultURL="file:///tmp/tibco_pdk_edit_workflow1862246316010129184/doc/index.html"
+            id="bw.jsonextension.product"
+            name="BusinessWorks JsonExtension Plugin">
+      </plugin>
+   </extension>
+   
+</plugin>

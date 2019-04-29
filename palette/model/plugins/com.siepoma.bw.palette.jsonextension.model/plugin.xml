@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+ Overridable true
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.tibco.com/bw/palette/jsonextension"
+            class="com.siepoma.bw.palette.jsonextension.model.jsonextension.JsonextensionPackage"
+            genModel="model/jsonextension.activity.genmodel"/>
+   </extension>
+   <extension
+         point="com.tibco.bw.model.ActivityIcon">
+    <activityIcon
+            activityTypeID="bw.jsonextension.validatejson"
+            diagramIcon="icons/obj48/jsonextension_validatejson_48x48.jpg"
+            largeIcon="icons/obj32/jsonextension_validatejson_32x32.jpg"
+            smallIcon="icons/obj16/jsonextension_validatejson_16x16.jpg">
+      </activityIcon>
+    <activityIcon
+            activityTypeID="bw.jsonextension.removenull"
+            diagramIcon="icons/obj48/jsonextension_removenull_48x48.jpg"
+            largeIcon="icons/obj32/jsonextension_removenull_32x32.jpg"
+            smallIcon="icons/obj16/jsonextension_removenull_16x16.jpg">
+      </activityIcon>
+    </extension>
+</plugin>

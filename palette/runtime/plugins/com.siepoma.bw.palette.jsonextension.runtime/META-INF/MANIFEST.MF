@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Provide-Capability: com.tibco.bw.palette; name=bw.jsonextension
+Export-Package: com.siepoma.bw.palette.jsonextension.runtime;version="
+ 1.0.0"; uses:="com.tibco.neo.localized,com.tibco.bw.runtime,javax.act
+ ivation,  com.tibco.neo.localized"
+Bundle-SymbolicName: com.siepoma.bw.palette.jsonextension.runtime
+Bundle-Version: 1.0.0.qualifier
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+Import-Package: com.siepoma.bw.palette.jsonextension.model.jsonextensi
+ on;version="1.0.0",com.tibco.bw.runtime.util;version="[6.0.0,7.0.0)",
+ com.tibco.bw.runtime;version="[6.0.0,7.0.0)",com.tibco.bw.runtime.ann
+ otation;version="[6.0.0,7.0.0)",com.tibco.neo.localized;version="[2.5
+ .0,3.0.0)",org.eclipse.emf.ecore;version="[2.4.2,3.0.0)",org.genxdm;v
+ ersion="[1.0.0,2.0.0)",org.genxdm.axes;version="[1.0.0,2.0.0)",org.ge
+ nxdm.io;version="[1.0.0,2.0.0)",org.genxdm.mutable;version="[1.0.0,2.
+ 0.0)",org.genxdm.nodes;version="[1.0.0,2.0.0)",org.genxdm.typed;versi
+ on="[1.0.0,2.0.0)",org.genxdm.typed.types;version="[1.0.0,2.0.0)",org
+ .genxdm.xs;version="[1.0.0,2.0.0)",org.genxdm.xs.components;version="
+ [1.0.0,2.0.0)",org.genxdm.xs.constraints;version="[1.0.0,2.0.0)",org.
+ genxdm.xs.exceptions;version="[1.0.0,2.0.0)",org.genxdm.xs.resolve;ve
+ rsion="[1.0.0,2.0.0)",org.genxdm.xs.types;version="[1.0.0,2.0.0)"
+Service-Component:  OSGI-INF/validatejson.xml, OSGI-INF/removenull.xml
+Bundle-ClassPath: lib/gson-2.8.5.jar,
+ .,
+ lib/json-20180813.jar
+
